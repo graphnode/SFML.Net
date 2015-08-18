@@ -1,8 +1,13 @@
 obj/
 lib/
-examples/*/*.dll
-doc/build/*xml
+examples/**/*.dll
+examples/**/*.vhost.exe.config
+doc/build/*.xml
+doc/build/*.chm
+build/**/packages
 *.exe
 *.manifest
 *.pdb
 *.suo
+*.user
+*.log
