@@ -1,10 +1,11 @@
 obj/
+bin/
 lib/
 examples/**/*.dll
 examples/**/*.vhost.exe.config
-doc/build/*.xml
-doc/build/*.chm
-build/**/packages
+doc/sources/
+doc/help/
+packages/
 *.exe
 *.manifest
 *.pdb

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="91d04409-b383-4b37-a580-b5129a1a6c27" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+    	<para>Welcome to the official SFML.Net documentation. Here you will find a detailed description of all the SFML.Net classes.</para>
+	    <para>If you are looking for tutorials, help or whatever, you can visit the <token>Official Website</token>.</para>
+    </introduction>
+
+    <section address="ShortExample">
+      <title>Short example</title>
+      <content>
+        <para>Here is a short example in C#, to show you how simple it is to use SFML.Net:</para>
+        <codeReference>WelcomeSnippet#Define</codeReference>
+      </content>
+    </section>
+    
+    <relatedTopics>
+      <externalLink>
+          <linkText>Official Website</linkText>
+          <linkAlternateText>Link to the SFML Website</linkAlternateText>
+          <linkUri>http://www.sfml-dev.org/</linkUri>
+      </externalLink>
+    </relatedTopics>
+  </developerConceptualDocument>
+</topic>

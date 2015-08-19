@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- This is an example code snippets file -->
+<examples>
+  <item id="WelcomeSnippet#Define">
+    <sampleCode language="CSharp">
+using System;
+using SFML.Audio;
+using SFML.Window;
+using SFML.Graphics;
+
+namespace Example
+{
+    class Program
+    {
+        static void OnClose(object sender, EventArgs e)
+        {
+            // Close the window when OnClose event is received
+            RenderWindow window = (RenderWindow)sender;
+            window.Close();
+        }
+
+        static void Main(string[] args)
+        {
+            // Create the main window
+            RenderWindow window = new RenderWindow(new VideoMode(800, 600), "SFML window");
+            window.Closed += new EventHandler(OnClose);
+
+            // Load a sprite to display
+            Texture texture = new Texture("cute_image.jpg");
+            Sprite sprite = new Sprite(texture);
+
+            // Create a graphical string to display
+            Font font = new Font("arial.ttf");
+            Text text = new Text("Hello SFML.Net", font);
+
+            // Load a music to play
+            Music music = new Music("nice_music.ogg");
+            music.Play();
+
+            // Start the game loop
+            while (window.IsOpen())
+            {
+                // Process events
+                window.DispatchEvents();
+
+                // Clear screen
+                window.Clear();
+
+                // Draw the sprite
+                window.Draw(sprite);
+
+                // Draw the string
+                window.Draw(text);
+
+                // Update the window
+                window.Display();
+            }
+        }
+    }
+}
+    </sampleCode>
+  </item>
+</examples>
+
