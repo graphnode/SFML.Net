@@ -5,7 +5,8 @@ Imports SFML.Window
 Imports SFML.Graphics
 Imports OpenTK
 Imports OpenTK.Graphics
-Imports OpenTk.Graphics.OpenGL
+Imports OpenTK.Graphics.OpenGL
+Imports OpenTK.Platform
 
 
 Module OpenGL
@@ -27,7 +28,11 @@ Module OpenGL
 
         ' Initialize OpenTK
         Toolkit.Init()
-        Dim context As GraphicsContext = New GraphicsContext(New ContextHandle(IntPtr.Zero), Nothing)
+
+        Dim graphicsMode = New GraphicsMode(32, contextSettings.DepthBits, contextSettings.StencilBits, contextSettings.AntialiasingLevel)
+        Dim windowInfo = Utilities.CreateWindowsWindowInfo(window.SystemHandle)
+        Dim context = New GraphicsContext(GraphicsMode, windowInfo)
+        context.LoadAll()
 
         ' Create a sprite for the background
         Dim background = New Sprite(New Texture("resources/background.jpg"))

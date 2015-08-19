@@ -12,3 +12,5 @@ packages/
 *.suo
 *.user
 *.log
+UpgradeLog.htm
+doc/build/*.xml

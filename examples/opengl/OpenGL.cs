@@ -6,6 +6,7 @@ using SFML.System;
 using OpenTK;
 using OpenTK.Graphics;
 using OpenTK.Graphics.OpenGL;
+using OpenTK.Platform;
 
 namespace opengl
 {
@@ -26,7 +27,11 @@ namespace opengl
 
             // Initialize OpenTK
             Toolkit.Init();
-            GraphicsContext context = new GraphicsContext(new ContextHandle(IntPtr.Zero), null);
+
+            GraphicsMode graphicsMode = new GraphicsMode(32, (int)contextSettings.DepthBits, (int)contextSettings.StencilBits, (int)contextSettings.AntialiasingLevel);
+            IWindowInfo windowInfo = Utilities.CreateWindowsWindowInfo(window.SystemHandle);
+            GraphicsContext context = new GraphicsContext(graphicsMode, windowInfo);
+            context.LoadAll();
 
             // Setup event handlers
             window.Closed     += new EventHandler(OnClosed);
