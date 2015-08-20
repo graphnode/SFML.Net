@@ -1,10 +1,10 @@
 obj/
 bin/
-lib/
+lib/**/*.*
+!lib/**/readme.txt
 examples/**/*.dll
-examples/**/*.vhost.exe.config
-doc/sources/
-doc/help/
+examples/**/*.config
+doc/help/*
 packages/
 *.exe
 *.manifest
@@ -15,3 +15,4 @@ packages/
 UpgradeLog.htm
 doc/build/*.xml
 build/
+
