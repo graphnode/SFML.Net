@@ -15,13 +15,16 @@
     <RootNamespace>Documentation</RootNamespace>
     <Name>Documentation</Name>
     <!-- SHFB properties -->
-    <OutputPath>help\</OutputPath>
+    <OutputPath>build\</OutputPath>
     <HtmlHelpName>SFML.Net</HtmlHelpName>
     <Language>en-US</Language>
     <FrameworkVersion>.NET Framework 4.0</FrameworkVersion>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\SFML.net.sln" />
+      <DocumentationSource sourceFile="..\src\Audio\sfml-audio.csproj" />
+      <DocumentationSource sourceFile="..\src\Graphics\sfml-graphics.csproj" />
+      <DocumentationSource sourceFile="..\src\System\sfml-system.csproj" />
+      <DocumentationSource sourceFile="..\src\Window\sfml-window.csproj" />
     </DocumentationSources>
     <BuildLogFile />
     <HtmlHelp1xCompilerPath />
