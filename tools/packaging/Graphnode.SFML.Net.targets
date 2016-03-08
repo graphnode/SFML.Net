@@ -76,9 +76,10 @@
   <PropertyGroup Condition="'$(VisualStudioVersion)' == '' Or
                             '$(VisualStudioVersion)' == '10.0' Or
                             '$(VisualStudioVersion)' == '11.0' Or
-                            '$(VisualStudioVersion)' == '12.0'">
+                            '$(VisualStudioVersion)' == '12.0' Or
+                            '$(VisualStudioVersion)' == '14.0'">
     <PipelineCollectFilesPhaseDependsOn>
-      CollectCSFMFiles;
+      CollectCSFMLFiles;
       $(PipelineCollectFilesPhaseDependsOn);
     </PipelineCollectFilesPhaseDependsOn>
   </PropertyGroup>

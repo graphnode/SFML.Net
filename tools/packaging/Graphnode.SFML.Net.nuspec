@@ -19,7 +19,7 @@
   </metadata>
   <files>
     <file src="..\..\bin\*.*" target="lib" />
-    <file src="..\..\lib\**\*.*" target="build" />
+    <file src="..\..\lib\**\*.*" exclude="..\..\lib\**\readme.txt" target="build" />
     <file src="Graphnode.SFML.Net.targets" target="build" />
   </files>
 </package>
