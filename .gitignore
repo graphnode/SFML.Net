@@ -1,8 +1,8 @@
 obj/
 bin/
-examples/**/*.dll
-examples/**/*.config
-doc/help/*
+/examples/**/*.dll
+/examples/**/*.config
+/doc/help/*
 packages/
 *.exe
 *.manifest
@@ -11,5 +11,5 @@ packages/
 *.user
 *.log
 UpgradeLog.htm
-doc/build/*.xml
-build/
+/doc/build/*.xml
+/build

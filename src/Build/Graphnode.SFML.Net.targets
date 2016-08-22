@@ -1,0 +1,86 @@
+﻿<!--
+ * SFML.Net.targets -
+ *
+ * WARNING: This MSBuild file requires MSBuild 4.0 features.
+ *
+ * Originally written by Joe Mistachkin and David Archer for System.Data.SQLite.Core
+ * Altered by Diogo Gomes
+ * Released to the public domain, use at your own risk!
+ *
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <CSFMLPlatform>x86</CSFMLPlatform>
+    <CSFMLPlatform Condition=" '$(Platform)' == 'x86' Or '$(Platform)' == 'x64' ">$(Platform)</CSFMLPlatform>
+  </PropertyGroup>
+  
+  <!-- NOTE: If the per-user settings file exists, import it now.  The contained settings, if any, will override the default ones provided below. -->
+  <Import Condition="'$(MSBuildThisFileDirectory)' != '' And HasTrailingSlash('$(MSBuildThisFileDirectory)') And Exists('$(MSBuildThisFileDirectory)\SFML.Net.targets.user')"
+		      Project="$(MSBuildThisFileDirectory)\SFML.Net.targets.user" />
+
+  <!-- Get the CSFML Files based on architecture -->
+  <ItemGroup>
+    <CSFMLFiles Condition="'$(MSBuildThisFileDirectory)' != '' And HasTrailingSlash('$(MSBuildThisFileDirectory)')" Include="$(MSBuildThisFileDirectory)$(CSFMLPlatform)\*.dll" />
+  </ItemGroup>
+  
+  <!-- Copy CSFML Content Files -->
+  <ItemGroup Condition="'$(ContentCSFMLFiles)' != '' And '$(ContentCSFMLFiles)' != 'false' And '@(CSFMLFiles)' != ''">
+    <Content Include="@(CSFMLFiles)">
+      <InProject>false</InProject>
+      <Link>%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
+  <!-- CSFMLFiles Build Target -->
+  <Target Name="CopyCSFMLFiles"
+          Condition="'$(CopyCSFMLFiles)' != 'false' And '$(OutDir)' != '' And HasTrailingSlash('$(OutDir)') And Exists('$(OutDir)')"
+          Inputs="@(CSFMLFiles)"
+          Outputs="@(CSFMLFiles -> '$(OutDir)%(Filename)%(Extension)')">
+
+    <Copy SourceFiles="@(CSFMLFiles)" DestinationFiles="@(CSFMLFiles -> '$(OutDir)%(Filename)%(Extension)')" />
+  </Target>
+
+  <!-- CSFMLFiles Clean Target -->
+  <Target Name="CleanCSFMLFiles" Condition="'$(CleanCSFMLFiles)' != 'false' And '$(OutDir)' != '' And HasTrailingSlash('$(OutDir)') And Exists('$(OutDir)')">
+    <Delete Files="@(CSFMLFiles -> '$(OutDir)%(Filename)%(Extension)')" />
+  </Target>
+  
+  <!-- CSFMLFiles Collect Target -->
+  <Target Name="CollectCSFMLFiles"
+        Condition="'$(CollectCSFMLFiles)' != 'false'">
+    <ItemGroup>
+      <FilesForPackagingFromProject Include="@(CSFMLFiles)">
+        <DestinationRelativePath>bin\%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+  
+  <PropertyGroup>
+    <PostBuildEventDependsOn>
+      $(PostBuildEventDependsOn);
+      CopyCSFMLFiles;
+    </PostBuildEventDependsOn>
+    <BuildDependsOn>
+      $(BuildDependsOn);
+      CopyCSFMLFiles;
+    </BuildDependsOn>
+    <CleanDependsOn>
+      $(CleanDependsOn);
+      CleanCSFMLFiles;
+    </CleanDependsOn>
+  </PropertyGroup>
+
+  <!-- Publish Properties for Visual Studio 201x -->
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '' Or
+                            '$(VisualStudioVersion)' == '10.0' Or
+                            '$(VisualStudioVersion)' == '11.0' Or
+                            '$(VisualStudioVersion)' == '12.0' Or
+                            '$(VisualStudioVersion)' == '14.0'">
+    <PipelineCollectFilesPhaseDependsOn>
+      CollectCSFMLFiles;
+      $(PipelineCollectFilesPhaseDependsOn);
+    </PipelineCollectFilesPhaseDependsOn>
+  </PropertyGroup>
+</Project>

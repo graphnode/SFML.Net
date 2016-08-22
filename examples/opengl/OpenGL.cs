@@ -172,7 +172,7 @@ namespace opengl
                 GL.Rotate(clock.ElapsedTime.AsSeconds() * 90, 0.0F, 0.0F, 1.0F);
 
                 // Draw the cube
-                GL.DrawArrays(OpenTK.Graphics.OpenGL.PrimitiveType.Triangles, 0, 36);
+                GL.DrawArrays(BeginMode.Triangles, 0, 36);
 
                 // Draw some text on top of our OpenGL object
                 window.PushGLStates();
