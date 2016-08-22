@@ -559,10 +559,12 @@ namespace SFML
                             MouseMoved(this, new MouseMoveEventArgs(e.MouseMove));
                         break;
 
-                    case EventType.MouseWheelMoved :
+#pragma warning disable CS0618 // Type or member is obsolete
+                    case EventType.MouseWheelMoved:
                         if (MouseWheelMoved != null)
                             MouseWheelMoved(this, new MouseWheelEventArgs(e.MouseWheel));
                         break;
+#pragma warning restore CS0618 // Type or member is obsolete
 
                     case EventType.MouseWheelScrolled :
                         if (MouseWheelScrolled != null)

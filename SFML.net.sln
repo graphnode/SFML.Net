@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sfml-window", "src\Window\sfml-window.csproj", "{D17DE83D-A592-461F-8AF2-53F9E22E1D0F}"
 EndProject
@@ -42,9 +42,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6F12F0
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{93912259-C41D-43B4-99ED-34F6B051B541}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "packaging", "tools\packaging\packaging.csproj", "{A7583891-5462-4035-B9CF-0AFDCB2EF42B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphnode.SFML.Net.Build", "src\Build\Graphnode.SFML.Net.Build.csproj", "{A7583891-5462-4035-B9CF-0AFDCB2EF42B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{31D24303-F6A9-4D53-BB03-A73EDCB3186D} = {31D24303-F6A9-4D53-BB03-A73EDCB3186D}
 		{D17DE83D-A592-461F-8AF2-53F9E22E1D0F} = {D17DE83D-A592-461F-8AF2-53F9E22E1D0F}
@@ -239,13 +237,17 @@ Global
 		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Debug|x64.Build.0 = Debug|Any CPU
 		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Debug|x86.Build.0 = Debug|Any CPU
 		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Release|x64.ActiveCfg = Release|Any CPU
+		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Release|x64.Build.0 = Release|Any CPU
 		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Release|x86.ActiveCfg = Release|Any CPU
+		{A7583891-5462-4035-B9CF-0AFDCB2EF42B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -258,6 +260,5 @@ Global
 		{9D4738F7-34EA-433A-A765-AF85A52A174D} = {BE4B1F06-496A-461D-AC50-FC096BB3E8F1}
 		{98552080-F688-46B4-A2FF-1AC7C50ECBE8} = {BE4B1F06-496A-461D-AC50-FC096BB3E8F1}
 		{C1140035-B151-4058-8B70-B23A3D5F612F} = {18C13F25-64BD-4884-A33C-D1DFD486EFBA}
-		{A7583891-5462-4035-B9CF-0AFDCB2EF42B} = {93912259-C41D-43B4-99ED-34F6B051B541}
 	EndGlobalSection
 EndGlobal

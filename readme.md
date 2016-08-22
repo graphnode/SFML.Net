@@ -1,5 +1,7 @@
 # SFML.Net - Simple and Fast Multimedia Library for .Net
 
+[![NuGet Version](https://img.shields.io/nuget/v/Graphnode.SFML.Net.svg)](https://www.nuget.org/packages/Graphnode.SFML.Net)
+
 SFML is a simple, fast, cross-platform and object-oriented multimedia API. It provides access to windowing, graphics, audio and network.
 It is originally written in C++.
 
@@ -11,14 +13,20 @@ Please go to [SFML/SFML.Net](https://github.com/SFML/SFML.Net) to get the offici
 * Zachariah Brown - active maintainer (contact@zbrown.net)
 * Diogo Gomes - the guy to blame if this fork breaks (dgomes@graphnode.com)
 
-## Download
-You can either download the source and build it (don't forget to download the CSFML files, read the Dependencies topic below)
+## Using the Library
+The easy way, and what most people want, is to use the [nuget package](https://www.nuget.org/packages/Graphnode.SFML.Net) so use IDE package manager to get it.
+See the next part on how to build the source.
+
+## Building the Source
+Run the Graphnode.SFML.Net.Build project to build the source.  
+It will download the CSFML dependencies automatically and create the nuget package.  
+* The bin folder contains the sfml.net assemblies.
+* The build folder contains the nuget package ready to go.
+* The obj folder should contain the downloaded csfml files.
 
 ## Running the Examples
-You need to [download](http://www.sfml-dev.org/download/csfml/) ([or build](https://github.com/SFML/CSFML/)) the CSFML DLLs from and place them in the `/lib/x86` and/or `/lib/x64` depending on the architecture(s) you want to build the examples on.
-
-Another dependency is the OpenTK library, this is required by some examples (opengl, vb and window) to run correctly.
-It is not required unless you plan on running the example programs that are included.
+Open the solution and start the project in the Examples folders.  
+It should do everything automatically including downloading the csfml and required nuget packages (opentk).
 
 ## Building the Documentation
 You need to download the [Sandcastle Help File Builder (SHFB)](https://github.com/EWSoftware/SHFB) and then either use the Visual Studio plugin or standalone application to build the shfb project in the `/doc` directory.
@@ -33,10 +41,8 @@ There is no tutorial for SFML.Net, but since it's a binding you can use the C++ 
 Of course, you can also find the SFML.Net API documentation in the SDK.
 
 ## Dependencies
-To run SFML.NET executables you must have a copy of CSFML. CSFML can be compiled from
-source (https://github.com/SFML/CSFML/) or downloaded from the offical release
-page (http://www.sfml-dev.org/download/csfml/). Also note that since CSFML depends on
-the main SFML project you also need all SFML runtime dependencies to build it.
+* SFML.Net requires the [CSFML](https://github.com/SFML/CSFML/) files which are automatically downloaded if they are not found.  
+* OpenTK is only required in some examples for demonstrative purposes.
 
 ## Contribute
 **Note**: Please use this fork's issue tracker (https://github.com/graphnode/SFML.Net/issues), and not the official one, for issues related to this fork.

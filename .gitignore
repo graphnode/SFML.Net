@@ -1,7 +1,5 @@
 obj/
 bin/
-lib/**/*.*
-!lib/**/readme.txt
 examples/**/*.dll
 examples/**/*.config
 doc/help/*
@@ -15,4 +13,3 @@ packages/
 UpgradeLog.htm
 doc/build/*.xml
 build/
-

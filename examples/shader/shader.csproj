@@ -66,7 +66,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\lib\$(Platform)\*.dll">
+    <Content Include="..\..\obj\lib\$(Platform)\*.dll">
       <InProject>false</InProject>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
