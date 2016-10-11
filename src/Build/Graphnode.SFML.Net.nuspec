@@ -10,9 +10,9 @@
     <description>Fork of SFML.Net 2.3 that includes both x86 and x64 versions of CSFML.</description>
     <language>en-US</language>
     <projectUrl>https://github.com/graphnode/SFML.Net</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/graphnode/SFML.Net/master/tools/packaging/icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/graphnode/SFML.Net/master/src/Build/icon.png</iconUrl>
     <releaseNotes>Added latest fixes and improvements of SFML.Net 2.3.</releaseNotes>
-    <copyright>Copyright © 2015</copyright>
+    <copyright>Copyright © 2016</copyright>
     <tags>sfml net csfml</tags>
     <references />
     <dependencies/>
