@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>build</RootNamespace>
     <AssemblyName>build</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -69,21 +70,17 @@
   <Target Name="BeforeBuild">
     <MakeDir Condition="!Exists('$(SolutionDir)obj')" Directories="$(SolutionDir)obj" />
     <MakeDir Condition="!Exists('$(SolutionDir)obj/lib')" Directories="$(SolutionDir)obj/lib" />
-
     <Message Condition="!Exists('$(SolutionDir)obj/$(CSFMLx86Filename).zip')" Importance="high" Text="Downloading CSFML files..." />
     <Message Condition="Exists('$(SolutionDir)obj/$(CSFMLx86Filename).zip')" Importance="high" Text="Skipping download of CSFML files because they were found." />
     <DownloadFile Condition="!Exists('$(SolutionDir)obj/$(CSFMLx86Filename).zip')" Address="$(CSFMLx86Url)" FileName="$(SolutionDir)obj/$(CSFMLx86Filename).zip" />
     <DownloadFile Condition="!Exists('$(SolutionDir)obj/$(CSFMLx64Filename).zip')" Address="$(CSFMLx64Url)" FileName="$(SolutionDir)obj/$(CSFMLx64Filename).zip" />
-
-    <Message Condition="!Exists('$(SolutionDir)obj/$(CSFMLx86Filename)')"  Importance="high" Text="Extracting CSFML files..." />
+    <Message Condition="!Exists('$(SolutionDir)obj/$(CSFMLx86Filename)')" Importance="high" Text="Extracting CSFML files..." />
     <UnzipFile Condition="!Exists('$(SolutionDir)obj/$(CSFMLx86Filename)')" FileName="$(SolutionDir)obj/$(CSFMLx86Filename).zip" ExtractPath="$(SolutionDir)obj/$(CSFMLx86Filename)" />
     <UnzipFile Condition="!Exists('$(SolutionDir)obj/$(CSFMLx64Filename)')" FileName="$(SolutionDir)obj/$(CSFMLx64Filename).zip" ExtractPath="$(SolutionDir)obj/$(CSFMLx64Filename)" />
-    
     <ItemGroup>
       <CSFMLx86Files Include="$(SolutionDir)obj/$(CSFMLx86Filename)/CSFML/bin/*.*" />
       <CSFMLx64Files Include="$(SolutionDir)obj/$(CSFMLx64Filename)/CSFML/bin/*.*" />
     </ItemGroup>
-
     <Message Importance="high" Text="Copying CSFML files into $(SolutionDir)obj\lib..." />
     <Copy SourceFiles="@(CSFMLx86Files)" DestinationFolder="$(SolutionDir)obj/lib/x86" />
     <Copy SourceFiles="@(CSFMLx64Files)" DestinationFolder="$(SolutionDir)obj/lib/x64" />

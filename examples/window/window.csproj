@@ -61,8 +61,8 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\OpenTK.1.1.2349.61993\lib\NET40\OpenTK.dll</HintPath>
+    <Reference Include="OpenTK, Version=2.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OpenTK.2.0.0\lib\net20\OpenTK.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -77,9 +77,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Build\Graphnode.SFML.Net.Build.csproj">
+      <Project>{a7583891-5462-4035-b9cf-0afdcb2ef42b}</Project>
+      <Name>Graphnode.SFML.Net.Build</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\System\sfml-system.csproj">
       <Project>{31d24303-f6a9-4d53-bb03-a73edcb3186d}</Project>
       <Name>sfml-system</Name>
