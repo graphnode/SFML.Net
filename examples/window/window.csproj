@@ -77,14 +77,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Build\Graphnode.SFML.Net.Build.csproj">
-      <Project>{a7583891-5462-4035-b9cf-0afdcb2ef42b}</Project>
-      <Name>Graphnode.SFML.Net.Build</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\src\System\sfml-system.csproj">
       <Project>{31d24303-f6a9-4d53-bb03-a73edcb3186d}</Project>
       <Name>sfml-system</Name>

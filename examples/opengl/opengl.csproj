@@ -63,10 +63,6 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Build\Graphnode.SFML.Net.Build.csproj">
-      <Project>{a7583891-5462-4035-b9cf-0afdcb2ef42b}</Project>
-      <Name>Graphnode.SFML.Net.Build</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\src\Graphics\sfml-graphics.csproj">
       <Project>{46786269-57b9-48e7-aa4f-8f4d84609fe6}</Project>
       <Name>sfml-graphics</Name>
@@ -103,7 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
     <None Include="resources\sansation.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -137,7 +137,7 @@ namespace window
                 GL.Rotate(clock.ElapsedTime.AsSeconds() * 90, 0.0F, 0.0F, 1.0F);
 
                 // Draw the cube
-                GL.DrawArrays(Primi.Triangles, 0, 36);
+                GL.DrawArrays(PrimitiveType.Triangles, 0, 36);
 
                 // Finally, display the rendered frame on screen
                 window.Display();

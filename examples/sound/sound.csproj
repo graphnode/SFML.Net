@@ -56,10 +56,6 @@
       <Project>{0B202C4D-A457-47FE-84A3-031DD878C6BE}</Project>
       <Name>sfml-audio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Build\Graphnode.SFML.Net.Build.csproj">
-      <Project>{a7583891-5462-4035-b9cf-0afdcb2ef42b}</Project>
-      <Name>Graphnode.SFML.Net.Build</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\src\System\sfml-system.csproj">
       <Project>{31D24303-F6A9-4D53-BB03-A73EDCB3186D}</Project>
       <Name>sfml-system</Name>
