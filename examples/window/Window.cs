@@ -35,9 +35,9 @@ namespace window
             context.LoadAll();
 
             // Setup event handlers
-            window.Closed     += new EventHandler(OnClosed);
+            window.Closed += new EventHandler(OnClosed);
             window.KeyPressed += new EventHandler<KeyEventArgs>(OnKeyPressed);
-            window.Resized    += new EventHandler<SizeEventArgs>(OnResized);
+            window.Resized += new EventHandler<SizeEventArgs>(OnResized);
 
             // Set the color and depth clear values
             GL.ClearDepth(1);

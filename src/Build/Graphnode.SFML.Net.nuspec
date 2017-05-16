@@ -2,17 +2,17 @@
 <package >
   <metadata>
     <id>Graphnode.SFML.Net</id>
-    <version>2.3.1</version>
+    <version>2.4</version>
     <title>Graphnode.SFML.Net</title>
     <authors>Laurent Gomila, Zachariah Brown</authors>
     <owners>Diogo Gomes</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Fork of SFML.Net 2.3 that includes both x86 and x64 versions of CSFML.</description>
+    <description>Fork of SFML.Net 2.4 that includes both x86 and x64 versions of CSFML.</description>
     <language>en-US</language>
     <projectUrl>https://github.com/graphnode/SFML.Net</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/graphnode/SFML.Net/master/src/Build/icon.png</iconUrl>
-    <releaseNotes>Added latest fixes and improvements of SFML.Net 2.3.</releaseNotes>
-    <copyright>Copyright © 2016</copyright>
+    <releaseNotes>Updated to CSFML 2.4 and merged latest SFML.Net code.</releaseNotes>
+    <copyright>Copyright © 2017</copyright>
     <tags>sfml net csfml</tags>
     <references />
     <dependencies/>

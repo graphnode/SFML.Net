@@ -62,10 +62,10 @@
     </Task>
   </UsingTask>
   <PropertyGroup>
-    <CSFMLx86Url>http://www.sfml-dev.org/files/CSFML-2.3-windows-32-bit.zip</CSFMLx86Url>
-    <CSFMLx86Filename>CSFML-2.3-windows-32-bit</CSFMLx86Filename>
-    <CSFMLx64Url>http://www.sfml-dev.org/files/CSFML-2.3-windows-64-bit.zip</CSFMLx64Url>
-    <CSFMLx64Filename>CSFML-2.3-windows-64-bit</CSFMLx64Filename>
+    <CSFMLx86Url>https://www.sfml-dev.org/files/CSFML-2.4-windows-32-bit.zip</CSFMLx86Url>
+    <CSFMLx86Filename>CSFML-2.4-windows-32-bit</CSFMLx86Filename>
+    <CSFMLx64Url>https://www.sfml-dev.org/files/CSFML-2.4-windows-64-bit.zip</CSFMLx64Url>
+    <CSFMLx64Filename>CSFML-2.4-windows-64-bit</CSFMLx64Filename>
   </PropertyGroup>
   <Target Name="BeforeBuild">
     <MakeDir Condition="!Exists('$(SolutionDir)obj')" Directories="$(SolutionDir)obj" />

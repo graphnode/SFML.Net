@@ -40,7 +40,7 @@ Module OpenGL
         ' Create a text to display on top of the OpenGL object
         Dim text = New Text("SFML / OpenGL demo", New Font("resources/sansation.ttf"))
         text.Position = New Vector2f(250, 450)
-        text.Color = New Color(255, 255, 255, 170)
+        text.FillColor = New Color(255, 255, 255, 170)
 
         ' Make it the active window for OpenGL calls
         window.SetActive(True)
