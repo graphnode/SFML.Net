@@ -2,11 +2,15 @@
 
 [![NuGet Version](https://img.shields.io/nuget/v/Graphnode.SFML.Net.svg)](https://www.nuget.org/packages/Graphnode.SFML.Net)
 
+**ATTENTION: The official 2.5 version of SFML.Net has been released. Please use that one.**
+
 SFML is a simple, fast, cross-platform and object-oriented multimedia API. It provides access to windowing, graphics, audio and network.
 It is originally written in C++.
 
 ## This is not the official .NET binding!
 Please go to [SFML/SFML.Net](https://github.com/SFML/SFML.Net) to get the official .net binding.
+
+**ATTENTION: The official 2.5 version of SFML.Net has been released. Please use that one.**
 
 ## Authors
 * Laurent Gomila - main developer (laurent@sfml-dev.org)
@@ -46,6 +50,8 @@ Of course, you can also find the SFML.Net API documentation in the SDK.
 
 ## Contribute
 **Note**: Please use this fork's issue tracker (https://github.com/graphnode/SFML.Net/issues), and not the official one, for issues related to this fork.
+
+**ATTENTION: The official 2.5 version of SFML.Net has been released. Please use that one.**
 
 SFML and SFML.Net are open-source projects, and they need your help to go on growing and improving.
 Don't hesitate to post suggestions or bug reports on the forum (http://en.sfml-dev.org/forums/)
